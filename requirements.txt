@@ -1,0 +1,6 @@
+# required libraries
+
+numpy
+scipy
+pandas
+matplotlib
