@@ -1,4 +1,4 @@
-# In a real engineering scenario, the signal data would come from actual hardware — antennas, 
+# In a real scenario, the signal data would come from actual hardware — antennas, 
 # network equipment recording real wireless signals.
 # But we don't have that hardware. So signal_generator.py is our fake hardware — 
 # generating realistic looking signal data and saves it as CSV.
@@ -16,10 +16,10 @@ def generate_signal(frequency, duration, sampling_rate, noise_level):
 # function to write result in a csv file
 def save_signal(time_array, signal, filename):
     data = np.column_stack((time_array, signal))    # stacikng time and signal side by side into a column table
-    np.savetxt(f"data/{filename}", data, delimiter=",", header="time, amplitude", comments="")
+    np.savetxt(f"data/{filename}", data, delimiter=",", header="time,amplitude", comments="")
 
     print(f"Signal saved to data/{filename}")
 
 if __name__ == "__main__":
-    time_array, noisy_signal = generate_signal(50,1,1000,0.5)
+    time_array, noisy_signal = generate_signal(50,1,1000,0.1)
     save_signal(time_array, noisy_signal, 'signal.csv')
