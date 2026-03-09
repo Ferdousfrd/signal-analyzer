@@ -55,6 +55,7 @@ def analyze_signal(filename):
 
     print(f"Dominant frequency: {dominant_frequency:.1f} Hz")
     print(f"Estimated noise level: {noise_level:.4f}")
+    print(f"Sampling rate: {sampling_rate: .0f} Hz")
     return dominant_frequency, noise_level
     
 
